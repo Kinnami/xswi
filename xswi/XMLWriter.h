@@ -26,6 +26,9 @@
 
 #import <Foundation/Foundation.h>
 
+#import <CoreFoundation/CFString.h>
+#import <CoreFoundation/CFStringEncodingExt.h>
+
 // xml stream writer
 @protocol XMLStreamWriter
 
@@ -45,6 +48,7 @@
 - (void) writeAttribute:(NSString *)localName value:(NSString *)value;
 
 - (void) writeCharacters:(NSString*)text;
+- (void) writeCharacters:(NSString*)text withEscape:(bool)escape_text;
 - (void) writeComment:(NSString*)comment;
 - (void) writeProcessingInstruction:(NSString*)target data:(NSString*)data;
 - (void) writeCData:(NSString*)cdata;

@@ -26,6 +26,8 @@
 
 #import "XMLWriter.h"
 
+#import <CoreFoundation/CFString.h>
+
 #define NSBOOL(_X_) ((_X_) ? (id)kCFBooleanTrue : (id)kCFBooleanFalse)
 
 @interface XMLWriter (UtilityMethods)
@@ -510,11 +512,19 @@ static NSString *const XSI_NAMESPACE_URI_PREFIX = @"xsi";
 }
 
 - (void) writeCharacters:(NSString*)text {
+    [self writeCharacters: text withEscape: true];
+}
+
+- (void) writeCharacters:(NSString*)text withEscape: (bool)escape_text {
 	if(openElement) {
 		[self writeCloseElement:NO];
 	}
-	
-	[self writeEscape:text];
+
+	if (escape_text) {
+	    [self writeEscape:text];
+	} else {
+	    [self write:text];
+	}
 	
 	emptyElement = NO;
 }
@@ -730,9 +740,9 @@ static NSString *const XSI_NAMESPACE_URI_PREFIX = @"xsi";
 }
 
 - (NSData*) toData {
-	if(encoding) {
-		return [writer dataUsingEncoding: CFStringConvertEncodingToNSStringEncoding(CFStringConvertIANACharSetNameToEncoding((CFStringRef)encoding)) allowLossyConversion:NO];
-	} else {
+    	if(encoding) {
+	    return [writer dataUsingEncoding: CFStringConvertEncodingToNSStringEncoding(CFStringConvertIANACharSetNameToEncoding((CFStringRef)encoding)) allowLossyConversion:NO];
+	    } else {
 		return [writer dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:NO];
 	}
 }
