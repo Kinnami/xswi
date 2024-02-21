@@ -1,2 +1,5 @@
-xswi/obj/
+/Linux/obj/
+/FreeBSD/obj/
+/Windows/obj/
+/Darwin/obj/
 *~
