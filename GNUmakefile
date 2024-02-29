@@ -1,6 +1,6 @@
 #************************************************************************************************************#
 # Copyright © 2006-2015	Christopher James Elphinstone Chandler, Russell Geoffrey Watts. All Rights Reserved. #
-# Copyright © 2015-2023	Kinnami Software Corporation. All Rights Reserved.                                   #
+# Copyright © 2015-2024	Kinnami Software Corporation. All Rights Reserved.                                   #
 #************************************************************************************************************#
 
 # Based on GNUstep makefile system.
