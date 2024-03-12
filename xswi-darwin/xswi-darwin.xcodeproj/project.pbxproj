@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 45;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,16 +15,17 @@
 
 /* Begin PBXFileReference section */
 		8746CA832B964D7E00C0DAEF /* libxswi.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libxswi.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		8746CA942B964D7F00C0DAEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8746CA9D2B964DC300C0DAEF /* XMLWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XMLWriter.h; path = ../../xswi/XMLWriter.h; sourceTree = "<group>"; };
-		8746CA9E2B964DC300C0DAEF /* XMLWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XMLWriter.m; path = ../../xswi/XMLWriter.m; sourceTree = "<group>"; };
-		87C9D4712B964F9D00649653 /* AmiShare.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; lineEnding = 0; name = AmiShare.xcconfig; path = ../../../../../ReplicatingPeer/Makefiles/Darwin/AmiShare.xcconfig; sourceTree = "<group>"; };
-		87C9D4722B964FA700649653 /* AmiShare-release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; lineEnding = 0; name = "AmiShare-release.xcconfig"; path = "/mnt/ChrisC_Life-500GB/Users/chrisc/ChrisC_Life.Rimmer/src/UNIX-Multi-Platform/AmiShare/ReplicatingPeer/src/objc/libBoxOSBase/../../../Makefiles/Darwin/AmiShare-release.xcconfig"; sourceTree = "<absolute>"; };
+		8746CA9D2B964DC300C0DAEF /* XMLWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XMLWriter.h; path = ../xswi/XMLWriter.h; sourceTree = "<group>"; };
+		8746CA9E2B964DC300C0DAEF /* XMLWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XMLWriter.m; path = ../xswi/XMLWriter.m; sourceTree = "<group>"; };
+		876DC2CB2BA0A49C000596B7 /* GNUmakefile */ = {isa = PBXFileReference; lastKnownFileType = text; name = GNUmakefile; path = ../../GNUmakefile; sourceTree = "<group>"; };
+		876DC2CC2BA0A49C000596B7 /* xswi.makefile */ = {isa = PBXFileReference; lastKnownFileType = file; name = xswi.makefile; path = ../xswi.makefile; sourceTree = "<group>"; };
+		87C9D4712B964F9D00649653 /* AmiShare.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; lineEnding = 0; name = AmiShare.xcconfig; path = ../../../../ReplicatingPeer/Makefiles/Darwin/AmiShare.xcconfig; sourceTree = SOURCE_ROOT; };
+		87C9D4722B964FA700649653 /* AmiShare-release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; lineEnding = 0; name = "AmiShare-release.xcconfig"; path = "../../../../ReplicatingPeer/Makefiles/Darwin/AmiShare-release.xcconfig"; sourceTree = SOURCE_ROOT; };
 		87F032442B965D480094CF6F /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		87F032462B965D540094CF6F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		87F032492B965E320094CF6F /* GNUmakefile */ = {isa = PBXFileReference; lastKnownFileType = text; path = GNUmakefile; sourceTree = "<group>"; };
-		87F032BD2B965E410094CF6F /* GNUmakefile */ = {isa = PBXFileReference; lastKnownFileType = text; path = GNUmakefile; sourceTree = "<group>"; };
-		87F032D22B965E560094CF6F /* GNUmakefile */ = {isa = PBXFileReference; lastKnownFileType = text; path = GNUmakefile; sourceTree = "<group>"; };
+		87F032492B965E320094CF6F /* GNUmakefile */ = {isa = PBXFileReference; lastKnownFileType = text; name = GNUmakefile; path = ../Linux/GNUmakefile; sourceTree = "<group>"; };
+		87F032BD2B965E410094CF6F /* GNUmakefile */ = {isa = PBXFileReference; lastKnownFileType = text; name = GNUmakefile; path = ../FreeBSD/GNUmakefile; sourceTree = "<group>"; };
+		87F032D22B965E560094CF6F /* GNUmakefile */ = {isa = PBXFileReference; lastKnownFileType = text; name = GNUmakefile; path = ../Windows/GNUmakefile; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +47,6 @@
 				87F032462B965D540094CF6F /* Foundation.framework */,
 				87F032442B965D480094CF6F /* CoreFoundation.framework */,
 				8746CA852B964D7E00C0DAEF /* xswi-darwin */,
-				8746CA922B964D7F00C0DAEF /* xswi-darwinTests */,
 				8746CA842B964D7E00C0DAEF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -62,6 +62,8 @@
 		8746CA852B964D7E00C0DAEF /* xswi-darwin */ = {
 			isa = PBXGroup;
 			children = (
+				876DC2CB2BA0A49C000596B7 /* GNUmakefile */,
+				876DC2CC2BA0A49C000596B7 /* xswi.makefile */,
 				87F032D12B965E560094CF6F /* Windows */,
 				87F032BC2B965E410094CF6F /* FreeBSD */,
 				87F032482B965E320094CF6F /* Linux */,
@@ -70,22 +72,6 @@
 				8746CA9E2B964DC300C0DAEF /* XMLWriter.m */,
 			);
 			path = "xswi-darwin";
-			sourceTree = "<group>";
-		};
-		8746CA922B964D7F00C0DAEF /* xswi-darwinTests */ = {
-			isa = PBXGroup;
-			children = (
-				8746CA932B964D7F00C0DAEF /* Supporting Files */,
-			);
-			path = "xswi-darwinTests";
-			sourceTree = "<group>";
-		};
-		8746CA932B964D7F00C0DAEF /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				8746CA942B964D7F00C0DAEF /* Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		87C9D4702B964F8A00649653 /* build-install */ = {
@@ -170,7 +156,7 @@
 				};
 			};
 			buildConfigurationList = 8746CA7E2B964D7E00C0DAEF /* Build configuration list for PBXProject "xswi-darwin" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 3.1";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
