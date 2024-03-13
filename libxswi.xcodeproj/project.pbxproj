@@ -1,0 +1,259 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8762E4A42BA0D5650071995F /* XMLWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = 8762E4A22BA0D5650071995F /* XMLWriter.h */; };
+		8762E4A52BA0D5650071995F /* XMLWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8762E4A32BA0D5650071995F /* XMLWriter.m */; };
+		8762E4B52BA0D8640071995F /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8762E4B42BA0D8640071995F /* CoreFoundation.framework */; };
+		8762E4B72BA0D8760071995F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8762E4B62BA0D8760071995F /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8762E4A22BA0D5650071995F /* XMLWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XMLWriter.h; path = xswi/XMLWriter.h; sourceTree = SOURCE_ROOT; };
+		8762E4A32BA0D5650071995F /* XMLWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XMLWriter.m; path = xswi/XMLWriter.m; sourceTree = SOURCE_ROOT; };
+		8762E4A62BA0D59A0071995F /* GNUmakefile */ = {isa = PBXFileReference; lastKnownFileType = text; path = GNUmakefile; sourceTree = "<group>"; };
+		8762E4AB2BA0D5FA0071995F /* GNUmakefile */ = {isa = PBXFileReference; lastKnownFileType = text; path = GNUmakefile; sourceTree = "<group>"; };
+		8762E4AD2BA0D5FA0071995F /* GNUmakefile */ = {isa = PBXFileReference; lastKnownFileType = text; path = GNUmakefile; sourceTree = "<group>"; };
+		8762E4AF2BA0D5FA0071995F /* GNUmakefile */ = {isa = PBXFileReference; lastKnownFileType = text; path = GNUmakefile; sourceTree = "<group>"; };
+		8762E4B22BA0D6470071995F /* AmiShare.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = AmiShare.xcconfig; path = ../../../ReplicatingPeer/Makefiles/Darwin/AmiShare.xcconfig; sourceTree = "<group>"; };
+		8762E4B32BA0D6510071995F /* AmiShare-release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "AmiShare-release.xcconfig"; path = "../../../ReplicatingPeer/Makefiles/Darwin/AmiShare-release.xcconfig"; sourceTree = "<group>"; };
+		8762E4B42BA0D8640071995F /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		8762E4B62BA0D8760071995F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		87AFBA432BA0D15E00566920 /* libxswi.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libxswi.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		87AFBA402BA0D15E00566920 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8762E4B72BA0D8760071995F /* Foundation.framework in Frameworks */,
+				8762E4B52BA0D8640071995F /* CoreFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8762E4AA2BA0D5FA0071995F /* FreeBSD */ = {
+			isa = PBXGroup;
+			children = (
+				8762E4AB2BA0D5FA0071995F /* GNUmakefile */,
+			);
+			path = FreeBSD;
+			sourceTree = "<group>";
+		};
+		8762E4AC2BA0D5FA0071995F /* Linux */ = {
+			isa = PBXGroup;
+			children = (
+				8762E4AD2BA0D5FA0071995F /* GNUmakefile */,
+			);
+			path = Linux;
+			sourceTree = "<group>";
+		};
+		8762E4AE2BA0D5FA0071995F /* Windows */ = {
+			isa = PBXGroup;
+			children = (
+				8762E4AF2BA0D5FA0071995F /* GNUmakefile */,
+			);
+			path = Windows;
+			sourceTree = "<group>";
+		};
+		8762E4B02BA0D6190071995F /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		8762E4B12BA0D6310071995F /* build-install */ = {
+			isa = PBXGroup;
+			children = (
+				8762E4B22BA0D6470071995F /* AmiShare.xcconfig */,
+				8762E4B32BA0D6510071995F /* AmiShare-release.xcconfig */,
+				8762E4A62BA0D59A0071995F /* GNUmakefile */,
+			);
+			name = "build-install";
+			sourceTree = "<group>";
+		};
+		87AFBA3A2BA0D15E00566920 = {
+			isa = PBXGroup;
+			children = (
+				8762E4B62BA0D8760071995F /* Foundation.framework */,
+				8762E4B42BA0D8640071995F /* CoreFoundation.framework */,
+				8762E4B12BA0D6310071995F /* build-install */,
+				8762E4AE2BA0D5FA0071995F /* Windows */,
+				8762E4AA2BA0D5FA0071995F /* FreeBSD */,
+				8762E4AC2BA0D5FA0071995F /* Linux */,
+				87AFBA452BA0D15E00566920 /* xswi */,
+				8762E4B02BA0D6190071995F /* External Frameworks and Libraries */,
+				87AFBA442BA0D15E00566920 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		87AFBA442BA0D15E00566920 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				87AFBA432BA0D15E00566920 /* libxswi.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		87AFBA452BA0D15E00566920 /* xswi */ = {
+			isa = PBXGroup;
+			children = (
+				8762E4A22BA0D5650071995F /* XMLWriter.h */,
+				8762E4A32BA0D5650071995F /* XMLWriter.m */,
+			);
+			name = xswi;
+			path = libxswi;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		87AFBA412BA0D15E00566920 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8762E4A42BA0D5650071995F /* XMLWriter.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		87AFBA422BA0D15E00566920 /* libxswi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 87AFBA572BA0D15E00566920 /* Build configuration list for PBXNativeTarget "libxswi" */;
+			buildPhases = (
+				87AFBA3F2BA0D15E00566920 /* Sources */,
+				87AFBA402BA0D15E00566920 /* Frameworks */,
+				87AFBA412BA0D15E00566920 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = libxswi;
+			productName = libxswi;
+			productReference = 87AFBA432BA0D15E00566920 /* libxswi.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		87AFBA3B2BA0D15E00566920 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "Christopher Chandler";
+				TargetAttributes = {
+					87AFBA422BA0D15E00566920 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+				};
+			};
+			buildConfigurationList = 87AFBA3E2BA0D15E00566920 /* Build configuration list for PBXProject "libxswi" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 87AFBA3A2BA0D15E00566920;
+			productRefGroup = 87AFBA442BA0D15E00566920 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				87AFBA422BA0D15E00566920 /* libxswi */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		87AFBA3F2BA0D15E00566920 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8762E4A52BA0D5650071995F /* XMLWriter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		87AFBA552BA0D15E00566920 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8762E4B22BA0D6470071995F /* AmiShare.xcconfig */;
+			buildSettings = {
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+			};
+			name = Debug;
+		};
+		87AFBA562BA0D15E00566920 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8762E4B32BA0D6510071995F /* AmiShare-release.xcconfig */;
+			buildSettings = {
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+			};
+			name = Release;
+		};
+		87AFBA582BA0D15E00566920 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_MODEL_TUNING = G5;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		87AFBA592BA0D15E00566920 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_STYLE = "non-global";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		87AFBA3E2BA0D15E00566920 /* Build configuration list for PBXProject "libxswi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87AFBA552BA0D15E00566920 /* Debug */,
+				87AFBA562BA0D15E00566920 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		87AFBA572BA0D15E00566920 /* Build configuration list for PBXNativeTarget "libxswi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87AFBA582BA0D15E00566920 /* Debug */,
+				87AFBA592BA0D15E00566920 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 87AFBA3B2BA0D15E00566920 /* Project object */;
+}
