@@ -24,6 +24,9 @@
  * THE SOFTWARE.
  ****************************************************************************/
 
+/* Before including anything, set essential platform option compiler switches */
+#include "PLT/BoxPLTPlatformTarget.h"
+
 #import "XMLWriter.h"
 
 #import <CoreFoundation/CFString.h>
