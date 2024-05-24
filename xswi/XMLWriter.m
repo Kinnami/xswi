@@ -24,8 +24,10 @@
  * THE SOFTWARE.
  ****************************************************************************/
 
+#if (AMISHARE_USING_GCC || AMISHARE_USING_CLANG)
 /* Before including anything, set essential platform option compiler switches */
 #include "PLT/BoxPLTPlatformTarget.h"
+#endif /* (AMISHARE_USING_GCC || AMISHARE_USING_CLANG) */
 
 #import "XMLWriter.h"
 
