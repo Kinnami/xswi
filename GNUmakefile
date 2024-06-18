@@ -25,7 +25,6 @@ include $(AMISHARE_BASE)/ReplicatingPeer/Makefiles/pre.make
 #		AMISHARE_TARGET_VERSION == Windows7 for Windows 7
 #		AMISHARE_TARGET_VERSION == Windows10 for Windows 10
 
-# Note: use "shared=no" to build libTracelog statically
 ifeq ($(AMISHARE_TARGET), Linux)
 	SUBPROJECTS = "Linux"
 else
