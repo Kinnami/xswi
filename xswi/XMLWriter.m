@@ -33,8 +33,6 @@
 
 #import <CoreFoundation/CFString.h>
 
-#define NSBOOL(_X_) ((_X_) ? (id)kCFBooleanTrue : (id)kCFBooleanFalse)
-
 @interface XMLWriter (UtilityMethods)
 // methods for internal use only
 // pop the namespace stack, removing any namespaces which become out-of-scope
@@ -98,6 +96,40 @@ static NSString *const XSI_NAMESPACE_URI_PREFIX = @"xsi";
 	return self;
 }
 
+- (void) dealloc {
+    [writer release];
+    writer = nil;
+
+    [elementLocalNames release];
+    elementLocalNames = nil;
+
+    [elementNamespaceURIs release];
+    elementNamespaceURIs = nil;
+
+    [namespaceURIs release];
+    namespaceURIs = nil;
+
+    [namespaceCounts release];
+    namespaceCounts = nil;
+
+    [namespaceWritten release];
+    namespaceWritten = nil;
+
+    [namespaceURIPrefixMap release];
+    namespaceURIPrefixMap = nil;
+
+    [prefixNamespaceURIMap release];
+    prefixNamespaceURIMap = nil;
+
+    [indentation release];
+    indentation = nil;
+
+    [lineBreak release];
+    lineBreak = nil;
+	    
+    [super dealloc];
+}
+
 - (void) pushNamespaceStack {
 	// step namespace count - add the current namespace count
 	NSNumber* previousCount = [namespaceCounts lastObject];
@@ -119,15 +151,15 @@ static NSString *const XSI_NAMESPACE_URI_PREFIX = @"xsi";
 		for(NSUInteger i = [previousCount unsignedIntegerValue]; i < [namespaceURIs count]; i++) {
 			
 			// did we already write this namespace?
-			id written = [namespaceWritten objectAtIndex:i];
-			if(written == NSBOOL(NO)) {
+			NSNumber* written = [namespaceWritten objectAtIndex:i];
+			if(![written boolValue]) {
 				// write namespace
 				NSString* namespaceURI = [namespaceURIs objectAtIndex:i];
 				NSString* prefix = [namespaceURIPrefixMap objectForKey:namespaceURI];
 				
 				[self writeNamespaceToStream:prefix namespaceURI:namespaceURI];
 				
-				[namespaceWritten replaceObjectAtIndex:i withObject:NSBOOL(YES)];
+				[namespaceWritten replaceObjectAtIndex:i withObject:[NSNumber numberWithBool: YES]];
 			} else {
 				// already written namespace
 			}
@@ -190,10 +222,10 @@ static NSString *const XSI_NAMESPACE_URI_PREFIX = @"xsi";
 	if(openElement) { // write the namespace now
 		[self writeNamespaceToStream:prefix namespaceURI:namespaceURI];
 		
-		[namespaceWritten addObject:NSBOOL(YES)];
+		[namespaceWritten addObject:[NSNumber numberWithBool: YES]];
 	} else {
 		// write the namespace as the next start element is closed
-		[namespaceWritten addObject:NSBOOL(NO)];
+	    [namespaceWritten addObject:[NSNumber numberWithBool: NO]];
 	}
 }
 
@@ -753,8 +785,8 @@ static NSString *const XSI_NAMESPACE_URI_PREFIX = @"xsi";
 }
 
 - (void) setPrettyPrinting:(NSString*)aIndentation withLineBreak:(NSString*)aLineBreak {
-    self.indentation = aIndentation;
-    self.lineBreak = aLineBreak;
+    self.indentation = [aIndentation retain];
+    self.lineBreak = [aLineBreak retain];
 }
 
 

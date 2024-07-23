@@ -135,6 +135,8 @@
 @property (nonatomic, assign, readwrite) BOOL automaticEmptyElements;
 @property (nonatomic, readonly) int level;
 
+- (void) dealloc;
+
 // helpful for formatting, special needs
 // write linebreak, if any
 - (void) writeLinebreak;
