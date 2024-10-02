@@ -69,6 +69,9 @@ static NSString *const XSI_NAMESPACE_URI_PREFIX = @"xsi";
 - (XMLWriter*) init {
 	self = [super init];
 	if (self != nil) {
+		(void) XSI_NAMESPACE_URI;				/* Avoid unused variable compiler warning */
+		(void) XSI_NAMESPACE_URI_PREFIX;		/* Avoid unused variable compiler warning */
+		
 		// intialize variables
 		writer = [[NSMutableString alloc] init];
 		level = 0;
