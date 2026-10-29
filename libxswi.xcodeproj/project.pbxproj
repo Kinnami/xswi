@@ -14,6 +14,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		871208983093CC1100117587 /* xswi.makefile */ = {isa = PBXFileReference; lastKnownFileType = text; path = xswi.makefile; sourceTree = "<group>"; };
 		8762E4A22BA0D5650071995F /* XMLWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XMLWriter.h; path = xswi/XMLWriter.h; sourceTree = SOURCE_ROOT; };
 		8762E4A32BA0D5650071995F /* XMLWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XMLWriter.m; path = xswi/XMLWriter.m; sourceTree = SOURCE_ROOT; };
 		8762E4A62BA0D59A0071995F /* GNUmakefile */ = {isa = PBXFileReference; lastKnownFileType = text; path = GNUmakefile; sourceTree = "<group>"; };
@@ -77,6 +78,7 @@
 				8762E4B22BA0D6470071995F /* AmiShare.xcconfig */,
 				8762E4B32BA0D6510071995F /* AmiShare-release.xcconfig */,
 				8762E4A62BA0D59A0071995F /* GNUmakefile */,
+				871208983093CC1100117587 /* xswi.makefile */,
 			);
 			name = "build-install";
 			sourceTree = "<group>";
